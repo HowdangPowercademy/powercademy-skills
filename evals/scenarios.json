@@ -48,6 +48,22 @@
       "alternates": [
         "review my draft SKILL.md against the powercademy house standard before I open the PR"
       ]
+    },
+    {
+      "skill": "design-alm-process",
+      "plugin": "alm",
+      "prompt": "we deploy our Power Platform solutions by hand and it keeps going wrong - help me set up a proper ALM process",
+      "alternates": [
+        "how many environments do I need for this project?"
+      ]
+    },
+    {
+      "skill": "promote-solution",
+      "plugin": "alm",
+      "prompt": "promote my CustomerOnboarding solution from dev to the test environment",
+      "alternates": [
+        "my solution import failed with a missing dependency error"
+      ]
     }
   ]
 }

@@ -3,6 +3,36 @@
 All notable changes to this marketplace are documented here.
 Versioning follows [semver](https://semver.org/).
 
+## [0.9.0] — 2026-09-09
+
+### Added
+
+- **New plugin: `alm` (0.1.0)** — Power Platform ALM, the long-planned
+  conventions-adjacent domain (closes #14):
+  - **`design-alm-process`** — ground the real estate first ("absence is a
+    finding": work in the Default environment, unmanaged solutions in
+    production, no dev environment), six-question interview, then environment
+    strategy, solution segmentation/publisher, **the config boundary** table
+    (environment variables, connection references, what must *not* travel),
+    promotion path and named approvers → a written process document plus
+    build-along HTML.
+  - **`promote-solution`** — checkpointed execution: dependency pre-flight
+    (🟢), managed export (🟢), rehearsal import with evidence-based
+    verification (🟡), post-import config and a real end-to-end exercise (🟡),
+    then **production as a 🔴 hard stop** with explicit in-the-moment approval
+    and a rollback plan whose first step has been checked. Fixes go in dev,
+    never downstream; `--force-overwrite` is never a way to clear an error.
+  - Seeded gotchas including an import symptom→cause→fix table, and the honest
+    line that "rollback" mostly isn't — say so *before* the import.
+- Eval scenarios for both new skills (8 total).
+
+### Notes
+
+- Landscape re-verified before building: Power CAT has since shipped
+  `powercat-architecture-advisor` (designs *what to build*); this plugin
+  designs *how it ships*. Power Pages promotion remains fully covered by
+  Microsoft and is handed off, not rebuilt.
+
 ## [0.8.0] — 2026-08-24
 
 The two pre-release hardening features.

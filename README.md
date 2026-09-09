@@ -106,6 +106,25 @@ data — made *before* anything is generated:
 - Checkpoints run at **production volumes**, because a 50-row test proves
   nothing about delegation.
 
+### alm (0.1.0)
+
+How the work actually ships — and the deployment that doesn't ruin your evening:
+
+- **`design-alm-process`** — grounds in the estate you really have (including
+  the uncomfortable bits), interviews, then decides environment strategy,
+  solution segmentation, publisher, **the config boundary** (what varies per
+  environment and who owns it), promotion path and named approvers — written
+  up as a process the team can follow.
+- **`promote-solution`** — runs a promotion end to end with checkpoints:
+  pre-flights dependencies, exports managed, rehearses in test, verifies with
+  evidence rather than exit codes, and treats **production import as a 🔴 hard
+  stop** requiring explicit in-the-moment approval. Fixes go in dev, never
+  downstream.
+
+Routes execution to Microsoft's Dataverse solution skills, native pipelines and
+`pac` — and hands Power Pages promotion off entirely, because their plugin
+already covers it end to end.
+
 ### conventions (0.1.0)
 
 The judgement layer as a checklist — applied before anything gets built:

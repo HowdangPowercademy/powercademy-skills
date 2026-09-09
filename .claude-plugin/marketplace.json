@@ -27,6 +27,10 @@
         {
             "name": "conventions",
             "source": "./plugins/conventions"
+        },
+        {
+            "name": "alm",
+            "source": "./plugins/alm"
         }
     ]
 }
